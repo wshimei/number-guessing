@@ -7,6 +7,11 @@ var gameOver = false
 var tries = 0
 
 submit.addEventListener('click', checkNumber)
+input.addEventListener('keydown', function (e) {
+  if (e.keyCode === 13) {
+    checkNumber()
+  }
+})
 
 function gRandomNo (max, min) {
   var randomNo = Math.floor(Math.random() * (max - min) + min)
